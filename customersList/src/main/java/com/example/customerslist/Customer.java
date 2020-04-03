@@ -1,21 +1,25 @@
 package com.example.customerslist;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name="firstName")
     private String firstName;
+    @Column(name="lastName")
     private String lastName;
+    @Column(name="emailAddress")
     private String emailAddress;
+    @Column(name="jobTitle")
     private String jobTitle;
+    @Column(name="mobilePhone")
     private String mobilePhone;
+    @Column(name="city")
     private String city;
+    @Column(name="webPage")
     private String webPage;
 
     public Customer() {
