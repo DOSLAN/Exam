@@ -9,5 +9,4 @@ public interface CustomerslistRepository extends JpaRepository<Customer, Long> {
     List<Customer> findAll();
 
     @Override
-    <S extends Customer> S save(S entity);
-}
+    <S extends Customer> S save(S entity);}
